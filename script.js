@@ -58,8 +58,22 @@ var arrayZucchine = [
     }
 ];
 
-console.log(arrayZucchine);
+var somma = 0;
+// console.log(arrayZucchine);
+for(var i = 0; i < arrayZucchine.length; i++){
+    var thisZucchina = arrayZucchine[i];
+    // console.log(thisZucchina);
 
+    var pesoZucchine = thisZucchina.peso;
+    console.log(pesoZucchine);
+
+    somma += pesoZucchine;
+    
+}
+
+    
+console.log("Il peso complessivo delle zucchine è: " + somma);
+ 
 // FINE PRIMO ESERCIZIO
 
 // SECONDO ESERCIZIO
