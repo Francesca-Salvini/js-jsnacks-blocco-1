@@ -71,8 +71,8 @@
     
 // }
 
-    
-// console.log("Il peso complessivo delle zucchine è: " + somma);
+// OUTPUT
+// console.log("Il peso complessivo delle zucchine è: " , somma);
  
 // FINE PRIMO ESERCIZIO
 
@@ -136,12 +136,12 @@ var arrayZucchine = [
 
     var menodiQuindici = [];
     var piuDiQuindici = [];
-    console.log(arrayZucchine);
+    // console.log(arrayZucchine);
 
     for(var i = 0; i < arrayZucchine.length; i++ ){
         var thisZucchina = arrayZucchine[i];
 
-        console.log(thisZucchina);
+        // console.log(thisZucchina);
         if (thisZucchina.lunghezza < 15) {
             menodiQuindici.push(thisZucchina);
         } else {
@@ -151,8 +151,38 @@ var arrayZucchine = [
         
     }
 
-    console.log("meno di quindici " + menodiQuindici);
-    console.log("piu di quindici " + piuDiQuindici);
+    // OUTPUT
+    console.log("meno di 15", menodiQuindici);
+    console.log("piu di 15", piuDiQuindici);
 
+    // sommo i pesi delle zucchine in ciascun array (menodiQuindici e piuDiQuindici)
+    var sommaMenoDiQuindici = 0;
+    var sommaPiuDiQuindici = 0;
 
+    // ciclo per i pesi delle zucchine lunghe meno di 15 cm
+    for(var i = 0; i < menodiQuindici.length; i++){
+        var thisZucchina = menodiQuindici[i];
+        // console.log(thisZucchina);
+    
+        var pesoZucchine = thisZucchina.peso;
+        // console.log(pesoZucchine);
+    
+        sommaMenoDiQuindici += pesoZucchine;
+        
+    }
+    // ciclo per i pesi delle zucchine lunghe più di 15 cm
+    for(var j = 0; j < piuDiQuindici.length; j++){
+        var thisZucchina = piuDiQuindici[j];
+        // console.log(thisZucchina);
+    
+        var pesoZucchine = thisZucchina.peso;
+        // console.log(pesoZucchine);
+    
+        sommaPiuDiQuindici += pesoZucchine;
+        
+    }
+
+    // OUTPUT
+    console.log("Il peso complessivo delle zucchine con lunghezza minore di 15 cm è: " , sommaMenoDiQuindici , "grammi") ;
+    console.log("Il peso complessivo delle zucchine con lunghezza maggiore di 15 cm è: " , sommaPiuDiQuindici , "grammi" ) ;
 // FINE SECONDO ESERCIZIO
